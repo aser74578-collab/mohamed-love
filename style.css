@@ -1,0 +1,174 @@
+body{
+margin:0;
+font-family:Arial;
+direction:rtl;
+text-align:center;
+}
+
+/* صفحة الباسورد */
+.login-body{
+background:linear-gradient(45deg,#ff4e88,#ff99cc);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.login-box{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.login-box input{
+padding:10px;
+font-size:18px;
+margin:10px 0;
+width:200px;
+}
+
+.login-box button{
+padding:10px 20px;
+font-size:18px;
+background:#ff4e88;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#error{
+color:red;
+}
+
+.loading-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-size:30px;
+opacity:0;
+pointer-events:none;
+transition:1s;
+z-index:10;
+}
+
+.loading-screen.active{
+opacity:1;
+pointer-events:auto;
+}
+
+.heart{
+position:fixed;
+color:#ff4e88;
+font-size:20px;
+animation:float 3s linear forwards;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-200px);opacity:0;}
+}
+
+.shake{
+animation:shake 0.3s;
+}
+
+@keyframes shake{
+0%{transform:translateX(0);}
+25%{transform:translateX(-5px);}
+50%{transform:translateX(5px);}
+75%{transform:translateX(-5px);}
+100%{transform:translateX(0);}
+}
+
+/* صفحة الرسالة */
+.message-body{
+background:#111;
+color:white;
+padding:20px;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+}
+
+.main-title{
+font-size:60px;
+color:#ff4e88;
+}
+
+.date{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.big-message{
+font-size:26px;
+line-height:1.9;
+margin-bottom:50px;
+color:#ffd1e8;
+white-space:pre-line;
+}
+
+/* Slider */
+.slider-container{
+position:relative;
+max-width:600px;
+margin:40px auto;
+}
+
+.slide{
+width:100%;
+border-radius:20px;
+display:none;
+}
+
+.slide.active{
+display:block;
+}
+
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+font-size:30px;
+padding:10px 15px;
+cursor:pointer;
+border-radius:50%;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.dots{
+text-align:center;
+margin-top:15px;
+}
+
+.dot{
+height:15px;
+width:15px;
+margin:5px;
+background:gray;
+border-radius:50%;
+display:inline-block;
+cursor:pointer;
+}
+
+.dot.active{
+background:#ff4e88;
+}
